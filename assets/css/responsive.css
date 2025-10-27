@@ -1,0 +1,27 @@
+/* XL Device :1200px. */
+
+@media screen and (max-width: 1620px) {
+
+}
+
+@media screen and (max-width: 1449px) {}
+
+
+/* LG Device :992px. */
+
+@media screen and (max-width: 1200px) {}
+
+
+/* MD Device :768px. */
+
+@media screen and (max-width: 991px) {}
+
+
+/* SM Small Device :320px. */
+
+@media screen and (max-width: 767px) {}
+
+
+/* SM Small Device :550px. */
+
+@media screen and (max-width: 575px) {}
