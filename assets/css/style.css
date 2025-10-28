@@ -73,6 +73,10 @@ textarea {
   display: none;
 }
 
+.top-minus-120 {
+  margin-top: -120px;
+}
+
 /* ----------------------------- HEADER AREA START ------------------------ */
 
 .header {
@@ -92,6 +96,7 @@ textarea {
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 5px 5px 0px #00000014;
 }
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -123,6 +128,7 @@ textarea {
   line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
+  position: relative;
 }
 
 .download__btn {
@@ -173,8 +179,28 @@ textarea {
   --size: 400px;
 }
 
-.header__menu nav ul li a:hover {
-  color: #f5f5f5;
+.header__menu nav ul li a:before {
+  position: absolute;
+  left: 50%;
+  top: 115%;
+  height: 2px;
+  width: 0;
+  content: "";
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.header__menu nav ul li a.active::before {
+  width: 100%;
+}
+
+.header__menu nav ul li a:hover::before {
+  width: 100%;
+}
+
+.hero__audio-wave img {
+  width: 100%;
 }
 
 /* ----------------------------- HEADER AREA END ------------------------ */
@@ -216,7 +242,7 @@ textarea {
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: 180px;
+  margin-top: 45px;
 }
 
 .hero__audio-box-center {
@@ -242,21 +268,21 @@ textarea {
   border: 12px solid #fff;
 }
 
-.hero__audio-box {
+.hero__audio-box-inner::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  z-index: 5;
 }
 
 .hero__audio-box-inner {
   position: relative;
-  width: 500px;
+  max-width: 500px;
   height: 250px;
   display: flex;
   padding-top: 88px;
@@ -280,6 +306,8 @@ textarea {
   -ms-border-radius: 26px;
   -o-border-radius: 26px;
   overflow: hidden;
+  margin: 0 auto;
+  z-index: 55;
 }
 
 .hero__audio-bird {
@@ -304,9 +332,29 @@ textarea {
   line-height: 1.4;
 }
 
+#typed-text {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  /* only move, no opacity */
+}
+
+/* ✨ Slide up animation */
+#typed-text.slip-out {
+  transform: translateY(-10px);
+  /* smooth upward slip */
+}
+
 .hero__audio-wave {
   width: 100%;
-  margin-top: -55px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.hero__audio-box {
+  position: relative;
+  z-index: 55;
 }
 
 .typewriter-text {
@@ -317,6 +365,19 @@ textarea {
 .typewriter-text.slide-out {
   transform: translateY(-20px);
   opacity: 0;
+}
+
+.hero__btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
+  margin-top: 45px;
+}
+
+.hero__btn .download__btn {
+  font-size: 16px;
+  padding: 12px 35px;
 }
 
 /* ----------------------------- HERO AREA END ------------------------ */
@@ -333,7 +394,7 @@ textarea {
   padding: 20px;
   border: 1px solid #fffffe;
   width: 360px;
-  height: 200px;
+  height: 240px;
   border-radius: 16px;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
@@ -487,7 +548,7 @@ textarea {
 .testimonial::after {
   position: absolute;
   left: 0;
-  top: 80px;
+  top: 102px;
   right: 0;
   height: 100px;
   content: "";
@@ -526,6 +587,9 @@ textarea {
 /* ----------------------------- ABOUT AREA END ------------------------ */
 
 /* ----------------------------- FEATURE AREA START ------------------------ */
+.feature {
+  overflow: hidden;
+}
 
 .feature__wrapper {
   display: flex;
@@ -533,6 +597,21 @@ textarea {
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 24px;
+}
+
+.feature__inner-block .feature__wrapper:nth-child(2) {
+  position: relative;
+  z-index: 333;
+}
+
+.feature__inner-block .feature__wrapper:nth-child(4) {
+  position: relative;
+  z-index: 33;
+}
+
+.feature__inner-block .feature__wrapper:nth-child(5) {
+  position: relative;
+  z-index: 33;
 }
 
 .feature__content {
@@ -627,7 +706,7 @@ textarea {
 
 /* ----------------------------- COMMUNITY AREA START ------------------------ */
 .community {
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 .container-fluid {
@@ -645,23 +724,61 @@ textarea {
 }
 
 .community__wrapper {
-  display: flex;
-  align-items: center;
-  gap: 22px 20px;
   margin-top: 80px;
 }
 
-.community__video {
-  height: 500px;
-  width: 300px;
-  flex: 0 0 auto;
+.video__card {
+  position: relative;
+  height: 470px;
+  overflow: hidden;
+  border-radius: 35px;
+  width: 313px;
 }
 
-.community__video img {
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.play__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff8e6ade 0%, #ffaf65c7 100%);
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.play__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 18px solid #ffffffe8;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.video__card video {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 40px;
+  z-index: 1;
+  display: none;
 }
 
 /* ----------------------------- COMMUNITY AREA END ------------------------ */
@@ -691,6 +808,7 @@ textarea {
 
 .insight {
   padding-bottom: 120px;
+  overflow: hidden;
 }
 
 .insight .container {
@@ -744,10 +862,6 @@ textarea {
   font-weight: 600;
 }
 
-.accordion__header:hover {
-  background: #f9f7f4;
-}
-
 .accordion__icon {
   transition: transform 0.3s ease;
   font-size: 16px;
@@ -758,7 +872,6 @@ textarea {
 .accordion__content {
   max-height: 0;
   overflow: hidden;
-  background: #fffdf8;
   transition: max-height 0.4s ease, padding 0.3s ease;
   padding: 0 15px;
 }
@@ -767,12 +880,12 @@ textarea {
   font-size: 16px;
   color: #333332;
   line-height: 24px;
+  padding-right: 25px;
 }
 
 .accordion__input:checked ~ .accordion__content {
   max-height: 200px;
   padding: 15px;
-  padding-right: 35px;
 }
 
 .accordion__input:checked + .accordion__header .accordion__icon {
@@ -925,7 +1038,7 @@ textarea {
 }
 
 .footer__column li {
-  line-height: 28px;
+  line-height: 30px;
 }
 
 .footer__column a {
@@ -1002,7 +1115,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 40px;
+  padding-top: 35px;
   border-top: 1px solid #00000080;
   margin-top: 80px;
 }
@@ -1029,7 +1142,7 @@ textarea {
 
 .footer__bottom-links span {
   color: #929292;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .footer__bottom-links a:hover {

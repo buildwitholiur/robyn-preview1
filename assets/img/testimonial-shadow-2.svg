@@ -1,17 +1,1 @@
-<svg width="1728" height="1786" viewBox="0 0 1728 1786" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_1101_4221)">
-<ellipse cx="854.585" cy="892.727" rx="788.411" ry="658.727" fill="url(#paint0_linear_1101_4221)" fill-opacity="0.7" style=""/>
-</g>
-<defs>
-<filter id="filter0_f_1101_4221" x="-167.826" y="0" width="2044.82" height="1785.45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="117" result="effect1_foregroundBlur_1101_4221"/>
-</filter>
-<linearGradient id="paint0_linear_1101_4221" x1="1583.02" y1="742.361" x2="905.219" y2="-9.9384" gradientUnits="userSpaceOnUse">
-<stop stop-color="#8DD9FF" style="stop-color:#8DD9FF;stop-color:color(display-p3 0.5529 0.8510 1.0000);stop-opacity:1;"/>
-<stop offset="0.764423" stop-color="white" stop-opacity="0.6" style="stop-color:white;stop-opacity:0.6;"/>
-<stop offset="1" stop-color="#FFC464" style="stop-color:#FFC464;stop-color:color(display-p3 1.0000 0.7684 0.3911);stop-opacity:1;"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1728" height="1786" fill="none"><g filter="url(#a)"><ellipse cx="854.585" cy="892.727" fill="url(#b)" fill-opacity=".7" rx="788.411" ry="658.727"/></g><defs><linearGradient id="b" x1="1583.02" x2="905.219" y1="742.361" y2="-9.938" gradientUnits="userSpaceOnUse"><stop stop-color="#8DD9FF" style="stop-color:#8dd9ff;stop-color:color(display-p3 .5529 .851 1);stop-opacity:1"/><stop offset=".764" stop-color="#fff" stop-opacity=".6" style="stop-color:white;stop-opacity:.6"/><stop offset="1" stop-color="#FFC464" style="stop-color:#ffc464;stop-color:color(display-p3 1 .7684 .3911);stop-opacity:1"/></linearGradient><filter id="a" width="2044.82" height="1785.45" x="-167.826" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_1101_4221" stdDeviation="117"/></filter></defs></svg>
