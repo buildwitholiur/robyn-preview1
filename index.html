@@ -35,26 +35,31 @@
     <link rel="stylesheet" href="assets/css/default.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <title>JR - Robyn Workspace</title>
+    <title>Robyn Workspace</title>
   </head>
 
   <body>
     <div class="main__area">
-      <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="offcanvas__menu accordion">
-                    <ul>
-                        <li><a href="#">Training & Events</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
+      <div class="offcanvas__menu desk_none">
+        <ul>
+          <li><a href="#about">Mission</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#communityy">Community</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="careers-form.html">Careers</a></li>
+        </ul>
+
+        <div class="header__btn">
+          <a href="https://bit.ly/3WUf98S" class="download__btn" target="_blank"
+            ><span>download</span></a
+          >
+        </div>
+
+        <button type="button" class="close__btn">
+          <i class="fa-regular fa-xmark-large"></i>
+        </button>
+      </div>
+      <div class="overlay desk_none"></div>
 
       <!-- -------------------------- HEADER AREA START -------------------------- -->
       <header class="header">
@@ -64,14 +69,14 @@
               <div class="header__logo">
                 <a href="#"><img src="assets/img/logo.svg" alt="Logo" /></a>
               </div>
-              <div class="header__menu">
+              <div class="header__menu phone_none">
                 <nav>
                   <ul>
                     <li><a href="#about">Mission</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#communityy">Community</a></li>
                     <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="careers-form.html">Careers</a></li>
                   </ul>
                 </nav>
               </div>
@@ -83,10 +88,10 @@
                 target="_blank"
                 ><span>download</span></a
               >
+              <button type="button" class="open__menu desk_none">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </div>
-            <!-- <a class="open__menu d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                          <i class="far fa-bars"></i>
-            </a> -->
           </div>
         </div>
       </header>
@@ -96,10 +101,10 @@
         <!-------------------------- HERO AREA START --------------------------->
         <section
           class="hero"
-          style="background-image: url(./assets/img/hero-bg.jpg)"
+          style="background-image: url(./assets/img/hero-bg.png)"
         >
           <div class="container">
-            <div class="hero__inner--block">
+            <div class="hero__inner-block">
               <div
                 class="hero__content"
                 data-aos="fade-up"
@@ -1661,73 +1666,77 @@
 
       <!-- -------------------------- FOOTER AREA START -------------------------- -->
       <footer class="footer">
-        <!-- <div class="footer__shape">
-            <img src="assets/img/footer-shadow-shape.png" alt="Shape">
-        </div> -->
-        <div class="container">
-          <div class="footer__area-inner">
-            <div class="footer__area-top">
-              <div class="footer__content">
-                <div class="footer__text">
-                  <h2>
-                    A place to be <br />
-                    deeply human.
-                  </h2>
-                </div>
-                <div class="footer__links">
-                  <div class="footer__column">
-                    <h3>ABOUT US</h3>
-                    <ul>
-                      <li><a href="#">Our Mission</a></li>
-                      <li><a href="#">Careers</a></li>
-                      <li><a href="#">FAQs</a></li>
-                    </ul>
+        <div class="footer__shape">
+          <img src="assets/img/footer-shadow-shape.png" alt="Shape" />
+        </div>
+        <div class="footer__inner-block">
+          <div class="container">
+            <div class="footer__area-inner">
+              <div class="footer__area-top">
+                <div class="footer__content">
+                  <div class="footer__text">
+                    <h2>
+                      A place to be <br />
+                      deeply human.
+                    </h2>
                   </div>
-                  <div class="footer__column">
-                    <h3>CONNECT</h3>
-                    <ul>
-                      <li>
-                        <a
-                          href="https://www.tiktok.com/@heyrobynai?_t=ZP-90oGpQtjcKd&_r=1"
-                          >TikTok</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.instagram.com/heyrobynai?igsh=NTc4MTIwNjQ2YQ=="
-                          >Instagram</a
-                        >
-                      </li>
-                      <li><a href="https://discord.gg/NnbcyB4s">Discord</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer__subscribe">
-                    <h3>GET A FREE MONTH</h3>
-                    <form action="#">
-                      <input type="email" placeholder="Email" required />
-                      <button type="submit">Put me in!</button>
-                    </form>
-                  </div>
-                  <div class="footer__brand">
-                    <a href="#"
-                      ><img src="assets/img/footer-logo.svg" alt="Logo"
-                    /></a>
-                    <a
-                      class="apple__store-btn"
-                      href="https://bit.ly/3WUf98S"
-                      target="_blank"
-                      ><img src="assets/img/apple-store-btn.svg" alt="Button"
-                    /></a>
+                  <div class="footer__links">
+                    <div class="footer__column">
+                      <h3>ABOUT US</h3>
+                      <ul>
+                        <li><a href="#about">Our Mission</a></li>
+                        <li><a href="#">Our team</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer__column">
+                      <h3>CONNECT</h3>
+                      <ul>
+                        <li>
+                          <a
+                            href="https://www.tiktok.com/@heyrobynai?_t=ZP-90oGpQtjcKd&_r=1"
+                            >TikTok</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.instagram.com/heyrobynai?igsh=NTc4MTIwNjQ2YQ=="
+                            >Instagram</a
+                          >
+                        </li>
+                        <li>
+                          <a href="https://discord.gg/NnbcyB4s">Discord</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="footer__subscribe">
+                      <h3>GET A FREE MONTH</h3>
+                      <form action="#">
+                        <input type="email" placeholder="Email" required />
+                        <button type="submit">Put me in!</button>
+                      </form>
+                    </div>
+                    <div class="footer__brand">
+                      <a href="#"
+                        ><img src="assets/img/footer-logo.svg" alt="Logo"
+                      /></a>
+                      <a
+                        class="apple__store-btn"
+                        href="https://bit.ly/3WUf98S"
+                        target="_blank"
+                        ><img src="assets/img/apple-store-btn.svg" alt="Button"
+                      /></a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="footer__bottom">
-              <p>© 2025 — All Rights Reserved</p>
-              <div class="footer__bottom-links">
-                <a href="#">Terms & Conditions</a>
-                <span>•</span>
-                <a href="#">Privacy Policy</a>
+              <div class="footer__bottom">
+                <p>© 2025 — All Rights Reserved</p>
+                <div class="footer__bottom-links">
+                  <a href="#">Terms & Conditions</a>
+                  <span>•</span>
+                  <a href="#">Privacy Policy</a>
+                </div>
               </div>
             </div>
           </div>
