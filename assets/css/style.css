@@ -503,7 +503,7 @@ textarea {
   right: 0;
   bottom: 193px;
   height: 100%;
-  width: 45%;
+  width: 57%;
 }
 
 .testimonial__shape-two img {
@@ -707,6 +707,10 @@ textarea {
   background: radial-gradient(circle closest-side, #58afe7, transparent);
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease;
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  -moz-transition: width 0.2s ease, height 0.2s ease;
+  -ms-transition: width 0.2s ease, height 0.2s ease;
+  -o-transition: width 0.2s ease, height 0.2s ease;
 }
 
 .common__btn:hover::before {
