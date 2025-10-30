@@ -5,7 +5,7 @@
     jQuery(document).ready(function ($) {
 
 
-       //------------ Offcanvas menu -------------
+        //------------ Offcanvas menu -------------
 
         $('.open__menu').on('click', function () {
             $('body').addClass('open__offcanvas');
@@ -67,7 +67,7 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1.9,
-                                spaceBetween: 10,
+                    spaceBetween: 10,
                 },
                 480: {
                     slidesPerView: 2,
@@ -364,6 +364,14 @@
         this.style.setProperty('--y', `${e.clientY - rect.top}px`);
     });
 
+
+
+
+    const bars = document.querySelectorAll('.wave span');
+
+    bars.forEach((bar, i) => {
+        bar.style.animationDelay = `${i * 0.5}s`;
+    });
 
 
 
