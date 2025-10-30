@@ -727,7 +727,7 @@ textarea {
 
 /* ----------------------------- COMMUNITY AREA START ------------------------ */
 .community {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .container-fluid {
@@ -842,7 +842,7 @@ textarea {
 
 .faq {
   padding-top: 140px;
-  padding-bottom: 300px;
+  padding-bottom: 160px;
   position: relative;
   z-index: 22;
 }
@@ -1072,6 +1072,7 @@ textarea {
 
 .form__question p {
   font-size: 22px;
+  line-height: 1.5;
   text-align: center;
   color: #fff;
 }
